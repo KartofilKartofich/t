@@ -3,6 +3,9 @@ from streamlit_image_coordinates import streamlit_image_coordinates
 
 real_code = st.secrets["real_code"]
 
+if "written_code" not in st.session_state:
+    st.session_state["written_code"] = []
+
 value = streamlit_image_coordinates("IMG_7195.PNG",
                                     #height=480, 
                                     width=st.secrets["width"],
